@@ -1,0 +1,39 @@
+1. Create a database and a table inside that, with 5 columns id(primary key), firstName,
+lastName, email, message.
+
+2. Make a stored procedure for secure addition to db.
+CREATE PROCEDURE insertData
+       @id VARCHAR(50) ,
+  @message varchar(250),
+  @firstName varchar(50),
+  @lastName varchar(50),
+  @email varchar(50)
+AS
+BEGIN
+     SET NOCOUNT ON
+
+     INSERT INTO data
+          (                    
+            id                     ,
+            message                  ,
+            firstName                      ,
+            lastName,
+email                
+          )
+     VALUES
+          (
+           @id,
+  @message,
+  @firstName,
+  @lastName,
+  @email
+          )
+
+END
+
+GO
+
+3. Execute it through backend controller code, using ADO .NET.
+command - exec insertData (parameters from the form)
+
+4. Used stored procedures beacuse they are safe from sql injection and other attacks.
