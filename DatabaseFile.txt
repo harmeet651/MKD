@@ -3,31 +3,31 @@ lastName, email, message.
 
 2. Make a stored procedure for secure addition to db.
 CREATE PROCEDURE insertData
-       @id VARCHAR(50) ,
-  @message varchar(250),
-  @firstName varchar(50),
-  @lastName varchar(50),
-  @email varchar(50)
+@id VARCHAR(50) ,
+@message varchar(250),
+@firstName varchar(50),
+@lastName varchar(50),
+@email varchar(50)
 AS
 BEGIN
-     SET NOCOUNT ON
+SET NOCOUNT ON
 
-     INSERT INTO data
-          (                    
-            id                     ,
-            message                  ,
-            firstName                      ,
-            lastName,
+INSERT INTO data
+(                    
+id,
+message,
+firstName,
+lastName,
 email                
-          )
-     VALUES
-          (
-           @id,
-  @message,
-  @firstName,
-  @lastName,
-  @email
-          )
+)
+VALUES
+(
+@id,
+@message,
+@firstName,
+@lastName,
+@email
+)
 
 END
 
