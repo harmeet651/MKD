@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron">
+        <button id="f" class="btn btn-secondary btn-lg">@Html.ActionLink("Add New", "Add", "Add", new { area = "" }, new { @class = "navbar-brand" })</button>
+        <style>
+            .jumbotron {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+            </style>
+    </div >
